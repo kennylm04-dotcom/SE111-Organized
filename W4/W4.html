@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Black Panther</title>
+  <meta name="author" content="Student">
+  <meta name="description" content="Black Panther - Marvel's groundbreaking superhero film set in the fictional African nation of Wakanda.">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --dark: #0a0a0a;
+      --mid: #111;
+      --light-text: #e8e0d0;
+      --muted: #888;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--dark);
+      color: var(--light-text);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+    }
+    #container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--gold);
+      opacity: 0.4;
+      margin: 0;
+    }
+    /* HEADER */
+    #header {
+      text-align: center;
+      padding: 48px 24px 32px;
+    }
+    #header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 0 0 40px rgba(201,168,76,0.3);
+    }
+    #header h1 span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    /* NAV */
+    #nav {
+      background: var(--mid);
+      padding: 0;
+    }
+    #nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+    #nav ul li a {
+      display: block;
+      padding: 16px 40px;
+      text-decoration: none;
+      color: var(--light-text);
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: color 0.2s, background 0.2s;
+    }
+    #nav ul li a:hover, #nav ul li a.active {
+      color: var(--gold);
+      background: rgba(201,168,76,0.08);
+    }
+    /* CONTENT */
+    #content {
+      padding: 48px 0;
+    }
+    #content h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      margin-bottom: 36px;
+      text-transform: uppercase;
+    }
+    /* HOME PAGE */
+    .home-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .poster-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: linear-gradient(160deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+    }
+    .poster-placeholder svg {
+      opacity: 0.3;
+    }
+    .home-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+      letter-spacing: 0.1em;
+    }
+    .synopsis {
+      line-height: 1.9;
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+    .info {
+      border-top: 1px solid rgba(201,168,76,0.2);
+      padding-top: 24px;
+    }
+    .info-item {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .info-item b {
+      color: var(--gold);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    /* FOOTER */
+    #footer {
+      background: var(--mid);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    #footer a {
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+    }
+    #footer a:hover { text-decoration: underline; }
+    .validation-shot {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+    @media (max-width: 640px) {
+      #header h1 { font-size: 2rem; }
+      .home-layout { grid-template-columns: 1fr; }
+      #nav ul li a { padding: 14px 20px; font-size: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+
+  <hr>
+
+  <div id="header">
+    <h1><span>Marvel Studios Presents</span>Black Panther</h1>
+  </div>
+
+  <div id="nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cast.html">Cast</a></li>
+      <li><a href="review.html">Review</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <section id="content">
+    <h2>Home</h2>
+
+    <div class="home-layout">
+      <!-- Movie Poster -->
+      <div>
+        <div class="poster-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21,15 16,10 5,21"/>
+          </svg>
+          <span>Movie Poster</span>
+          <span style="font-size:0.75rem; opacity:0.6;">(Add your image here)</span>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="home-text">
+        <h3>Synopsis</h3>
+        <p class="synopsis">
+          After the death of his father, T'Challa returns to the African nation of Wakanda to take his rightful place as king. But when a powerful enemy suddenly reappears, T'Challa's mettle as king — and as Black Panther — gets tested when he is drawn into a conflict that puts the entire fate of Wakanda and the world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people and their way of life.
+        </p>
+
+        <div class="info">
+          <div class="info-item"><b>Company Credits:</b> Marvel Studios, Walt Disney Pictures</div>
+          <div class="info-item"><b>Release Date:</b> February 16, 2018</div>
+          <div class="info-item"><b>Genre:</b> Superhero, Action, Adventure</div>
+          <div class="info-item"><b>Director:</b> Ryan Coogler</div>
+          <div class="info-item"><b>Runtime:</b> 134 minutes</div>
+          <div class="info-item"><b>Rating:</b> PG-13</div>
+          <div class="info-item"><b>Box Office:</b> $1.347 billion worldwide</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <div id="footer">
+    <a href="#header">↑ Back to Top</a>
+    <div class="validation-shot">
+      <p>Validation screenshot placeholder — .</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
