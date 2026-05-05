@@ -1,2 +1,4 @@
 const op = prompt("Choose operation: add or multiply");
-
+// 1 input
+const a = parseFloat(prompt("Enter first number:"));
+const b = parseFloat(prompt("Enter second number:"));
