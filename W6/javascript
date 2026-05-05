@@ -10,4 +10,4 @@ let result;
 if (op === "add")          result = add(a, b);
 else if (op === "multiply") result = multiply(a, b);
 //
-alert("Result: " + result);
+document.getElementById('result').textContent = 'Result: ' + result;
