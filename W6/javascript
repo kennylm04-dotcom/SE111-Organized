@@ -2,3 +2,10 @@ const op = prompt("Choose operation: add or multiply");
 // 1 input
 const a = parseFloat(prompt("Enter first number:"));
 const b = parseFloat(prompt("Enter second number:"));
+//
+function add(a, b)      { return a + b; }
+function multiply(a, b) { return a * b; }
+
+let result;
+if (op === "add")          result = add(a, b);
+else if (op === "multiply") result = multiply(a, b);
