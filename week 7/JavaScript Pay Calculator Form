@@ -1,0 +1,11 @@
+document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
+var fname = document.querySelector(`#first`).value;
+var lname = document.querySelector(`#last`).value;
+var hours = document.querySelector(`#hours`).value;
+var rate  = document.querySelector(`#rate`).value;
+var full = fname + ` ` + lname;
+hours = Number(hours);
+rate  = Number(rate);
+var gross     = hours * rate;
+var taxAmount = gross * 0.2;
+var net       = gross - taxAmount;
