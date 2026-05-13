@@ -9,3 +9,11 @@ rate  = Number(rate);
 var gross     = hours * rate;
 var taxAmount = gross * 0.2;
 var net       = gross - taxAmount;
+var info = document.querySelector(`#info`);
+info.innerHTML = finalMessage;
+var num = document.querySelector(`#check`);
+num.innerHTML = `Gross Pay: $${gross.toFixed(2)}<br>Tax Amount: $${taxAmount.toFixed(2)}<br>Net Pay: $${net.toFixed(2)}`;
+document.querySelector(`#submit`).addEventListener(`click`, submitNow)
+function submitNow(e) {
+    alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+}
