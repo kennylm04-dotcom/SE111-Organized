@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent and Child Elements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f7fbff;
+      color: #1a1a1a;
+    }
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #d3e2f5;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(20, 70, 120, 0.08);
+    }
+    .parent {
+      border: 2px solid #3b82f6;
+      padding: 20px;
+      border-radius: 10px;
+      background: #eff6ff;
+    }
+    .child {
+      border: 1px solid #2563eb;
+      margin: 12px 0;
+      padding: 16px;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    pre {
+      background: #e2e8f0;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Parent and Child Elements</h1>
+    <p>This example shows how a parent element can contain one or more child elements in HTML.</p>
+
+    <div class="parent">
+      <h2>Parent element</h2>
+      <p>The element below is the parent container. It holds child elements inside it.</p>
+
+      <div class="child">
+        <h3>Child element 1</h3>
+        <p>This is the first child element nested inside the parent.</p>
+      </div>
+
+      <div class="child">
+        <h3>Child element 2</h3>
+        <p>This is the second child element also nested inside the same parent.</p>
+      </div>
+
+      <p>Here is another example with nested list items:</p>
+      <ul>
+        <li>Parent list item
+          <ul>
+            <li>Child list item 1</li>
+            <li>Child list item 2</li>
+          </ul>
+        </li>
+        <li>Another parent list item</li>
+      </ul>
+    </div>
+
+    <h2>HTML structure</h2>
+    <p>The parent and child relationship looks like this in HTML code:</p>
+    <pre>&lt;div class="parent"&gt;
+  &lt;div class="child"&gt;...&lt;/div&gt;
+  &lt;div class="child"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+  </div>
+</body>
+</html>

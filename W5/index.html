@@ -1,2 +1,230 @@
 <!DOCTYPE html>
-ronaldo is tough
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Student">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Party Registration Form</title>
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font-family: Times New Roman, serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .page-wrapper {
+      background-color: white;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 40px;
+    }
+
+    h1 {
+      font-family: Times New Roman, serif;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: Times New Roman, serif;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    thead th {
+      border: 1px solid black;
+      padding: 6px 8px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    tbody td {
+      border: 1px solid black;
+      padding: 6px 8px;
+      vertical-align: middle;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"] {
+      width: 95%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 95%;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    select {
+      min-width: 120px;
+    }
+
+    .section-heading td {
+      padding: 10px 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Birthday Party Registration Form</h1>
+
+    <form action="confirm.html" method="GET">
+      <table>
+        <thead>
+          <tr>
+            <th>Labels</th>
+            <th>Form Fields</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Parent/Guardian Name -->
+          <tr>
+            <td><label for="gfirst">Parent/Guardian Name</label></td>
+            <td>
+              <input type="text" id="gfirst" name="gfirst" placeholder="First Name" required><br>
+              <input type="text" id="glast" name="glast" placeholder="Last Name" required>
+            </td>
+          </tr>
+
+          <!-- Child's First Name -->
+          <tr>
+            <td><label for="cfirst">Child's First Name</label></td>
+            <td>
+              <input type="text" id="cfirst" name="cfirst" placeholder="Child's First Name" required>
+            </td>
+          </tr>
+
+          <!-- Child's Age -->
+          <tr>
+            <td><label for="age">Child's Age</label></td>
+            <td>
+              <input type="number" id="age" name="age" value="3" min="1" max="18" required>
+            </td>
+          </tr>
+
+          <!-- Section: Date and Time -->
+          <tr class="section-heading">
+            <td colspan="2"><h2>Date and Time</h2></td>
+          </tr>
+
+          <!-- Date -->
+          <tr>
+            <td><label for="date">Date</label></td>
+            <td>
+              <input type="date" id="date" name="date" required>
+            </td>
+          </tr>
+
+          <!-- Start Time -->
+          <tr>
+            <td><label for="time">Start Time</label></td>
+            <td>
+              <input type="time" id="time" name="time" required>
+            </td>
+          </tr>
+
+          <!-- Number of Guests -->
+          <tr>
+            <td><label for="guests">Number of Guests</label></td>
+            <td>
+              <input type="number" id="guests" name="guests" value="5" min="1" required>
+            </td>
+          </tr>
+
+          <!-- Section: Food -->
+          <tr class="section-heading">
+            <td colspan="2"><h2>Food</h2></td>
+          </tr>
+
+          <!-- Size -->
+          <tr>
+            <td>Size</td>
+            <td>
+              <input type="radio" id="sm" name="size" value="sm" required>
+              <label for="sm">sm</label>
+              <input type="radio" id="med" name="size" value="med">
+              <label for="med">med</label>
+              <input type="radio" id="lg" name="size" value="lg">
+              <label for="lg">lg</label>
+            </td>
+          </tr>
+
+          <!-- Drinks -->
+          <tr>
+            <td>Drinks</td>
+            <td>
+              <input type="checkbox" id="drinks1" name="drinks1" value="coke" checked>
+              <label for="drinks1">Coke</label><br>
+              <input type="checkbox" id="drinks2" name="drinks2" value="sprite">
+              <label for="drinks2">Sprite</label><br>
+              <input type="checkbox" id="drinks3" name="drinks3" value="fruit punch">
+              <label for="drinks3">fruit punch</label><br>
+              <input type="checkbox" id="drinks4" name="drinks4" value="lemonade">
+              <label for="drinks4">lemonade</label><br>
+              <input type="checkbox" id="drinks5" name="drinks5" value="iced tea">
+              <label for="drinks5">Iced Tea</label>
+            </td>
+          </tr>
+
+          <!-- Cake -->
+          <tr>
+            <td><label for="cake">Cake</label></td>
+            <td>
+              <select id="cake" name="cake" required>
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="funfetti">Funfetti</option>
+              </select>
+            </td>
+          </tr>
+
+          <!-- Section: Decorations -->
+          <tr class="section-heading">
+            <td colspan="2"><h2>Decorations</h2></td>
+          </tr>
+
+          <!-- Color Scheme -->
+          <tr>
+            <td><label for="colors">Color Scheme</label></td>
+            <td>
+              Choose a color scheme for the party<br>
+              <input type="color" id="colors" name="colors" value="#000000">
+            </td>
+          </tr>
+
+          <!-- Additional Comments -->
+          <tr>
+            <td><label for="comments">Additional Comments</label></td>
+            <td>
+              <textarea id="comments" name="comments" rows="4" placeholder="Please add any additional comments"></textarea>
+            </td>
+          </tr>
+
+          <!-- Submit -->
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="submit">
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+
+  </div>
+</body>
+</html>
