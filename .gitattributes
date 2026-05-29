@@ -12,49 +12,33 @@
 </body>
 
 <script type="text/javascript">
-	//Use this Array of objects to complete the assignment.
-	var people =[
+	var people = [
 		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
-		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
-		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
-		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
-		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
-		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
-		{first:"Marion", last:"Cobretti", credit:"Cobra" }
-	]
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street"},
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit"},
+		{first:"Kevin", last:"McCallister", credit:"Home Alone"},
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla"},
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story"},
+		{first:"Marion", last:"Cobretti", credit:"Cobra"}
+	];
 
-	// 1. Query select the <body> tag and store it in a variable
 	var body = document.querySelector("body");
 
-	// 2. Loop through the array of objects
 	for (var i = 0; i < people.length; i++) {
-
-		// 3. Declare and create a new div, store it in tempDiv
 		var tempDiv = document.createElement("div");
 
-		// 4. Set the id to the incrementor (as a String)
 		tempDiv.setAttribute("id", String(i));
-
-		// 5. Set the class to "border" using setAttribute
 		tempDiv.setAttribute("class", "border");
 
-		// 6. Use a for/in loop to add each property of the object into the div
 		for (var key in people[i]) {
-
-			// a. Create a <p> element
 			var tempP = document.createElement("p");
-
-			// b. Create a text node using the property's value
 			var textNode = document.createTextNode(people[i][key]);
-
-			
-
-			//
+			tempP.appendChild(textNode);
+			tempDiv.appendChild(tempP);
 		}
 
-		
+		body.appendChild(tempDiv);
 	}
-
 </script>
 
 </html>
